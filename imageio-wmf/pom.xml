@@ -10,7 +10,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <name>Office-stamper ImageIO WMF</name>
+    <name>Verron.pro ImageIO WMF</name>
     <artifactId>imageio-wmf</artifactId>
     <packaging>jar</packaging>
     <description>
