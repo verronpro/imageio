@@ -15,9 +15,9 @@
     </description>
 
     <modules>
-        <module>wmf</module>
-        <module>emf</module>
-        <module>svg</module>
+        <module>imageio-wmf</module>
+        <module>imageio-emf</module>
+        <module>imageio-svg</module>
     </modules>
 
     <build>
