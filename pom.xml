@@ -13,6 +13,7 @@
         Minimal Java ImageIO plugin to detect vector files and read dimensions
         (width/height) without rendering.
     </description>
+    <inceptionYear>2026</inceptionYear>
 
     <modules>
         <module>imageio-wmf</module>
