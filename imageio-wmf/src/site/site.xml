@@ -10,11 +10,11 @@
     <body>
         <links>
             <item name="Blog" href="https://verron.pro/"/>
-            <item name="GitHub" href="https://github.com/verronpro/office-stamper"/>
+            <item name="GitHub" href="https://github.com/verronpro/imageio"/>
         </links>
 
         <menu name="Parent">
-            <item name="Parent" href="https://office-stamper.verron.pro"/>
+            <item name="Parent" href="https://imageio.verron.pro"/>
         </menu>
 
         <menu name="Module">
@@ -30,7 +30,7 @@
         <logo>images/logo.png</logo>
     </custom>
 
-    <edit>https://github.com/verronpro/office-stamper.git</edit>
+    <edit>https://github.com/verronpro/imageio.git</edit>
     <publishDate/>
     <version/>
 </site>
