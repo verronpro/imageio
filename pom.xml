@@ -160,13 +160,13 @@
             <dependency>
                 <groupId>pro.verron.asciidoc</groupId>
                 <artifactId>asciidoc-core</artifactId>
-                <version>3.4</version>
+                <version>3.5</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>pro.verron.asciidoc</groupId>
                 <artifactId>asciidoc-compiler</artifactId>
-                <version>3.4</version>
+                <version>3.5</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
