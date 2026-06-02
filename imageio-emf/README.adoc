@@ -1,0 +1,45 @@
+// suppress inspection "AsciiDocLinkResolve" for whole file
+:ghos: https://github.com/verronpro/imageio
+:docs: https://imageio.verron.pro/imageio-emf
+:blog: https://verron.pro
+
+= ImageIO EMF
+
+The `imageio-emf` module provides a plugin for the Java ImageIO API to read Enhanced Metafile (EMF) files.
+It allows for high-quality rendering of EMF content into `BufferedImage` using the standard ImageIO interface.
+
+== Key Features
+
+* **ImageIO Integration**: Automatically registered as a provider for EMF files.
+* **Vector Quality**: Preserves the vector quality of metafile content during rendering.
+* **Simple API**: Seamlessly integrates with `ImageIO.read()`.
+
+== Quick Start
+
+[source,java]
+----
+BufferedImage image = ImageIO.read(new File("image.emf"));
+----
+
+== Maven Coordinates
+
+[source,xml]
+----
+<dependency>
+    <groupId>pro.verron.imageio</groupId>
+    <artifactId>imageio-emf</artifactId>
+    <version>${project.version}</version>
+</dependency>
+----
+
+== Documentation
+
+For more information, visit the {docs}[Official Documentation].
+
+== Author
+
+Joseph Verron - {blog}/about.html[About Me]
+
+== License
+
+MIT License

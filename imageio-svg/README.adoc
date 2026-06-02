@@ -1,0 +1,45 @@
+// suppress inspection "AsciiDocLinkResolve" for whole file
+:ghos: https://github.com/verronpro/imageio
+:docs: https://imageio.verron.pro/imageio-svg
+:blog: https://verron.pro
+
+= ImageIO SVG
+
+The `imageio-svg` module provides a plugin for the Java ImageIO API to read Scalable Vector Graphics (SVG) files.
+It uses Apache Batik for high-quality rendering of SVG content into `BufferedImage`.
+
+== Key Features
+
+* **ImageIO Integration**: Automatically registered as a provider for SVG files.
+* **High Quality**: Leverages Apache Batik for accurate vector rendering.
+* **Simple API**: Use `ImageIO.read()` to load SVG files just like any other image format.
+
+== Quick Start
+
+[source,java]
+----
+BufferedImage image = ImageIO.read(new File("image.svg"));
+----
+
+== Maven Coordinates
+
+[source,xml]
+----
+<dependency>
+    <groupId>pro.verron.imageio</groupId>
+    <artifactId>imageio-svg</artifactId>
+    <version>${project.version}</version>
+</dependency>
+----
+
+== Documentation
+
+For more information, visit the {docs}[Official Documentation].
+
+== Author
+
+Joseph Verron - {blog}/about.html[About Me]
+
+== License
+
+MIT License
