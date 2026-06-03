@@ -1,4 +1,6 @@
-module pro.verron.officestamper.imageio.emf {
+import pro.verron.imageio.emf.EmfImageReaderSpi;
+
+module pro.verron.imageio.emf {
     requires java.desktop;
-    provides javax.imageio.spi.ImageReaderSpi with pro.verron.officestamper.imageio.emf.EmfImageReaderSpi;
+    provides javax.imageio.spi.ImageReaderSpi with EmfImageReaderSpi;
 }

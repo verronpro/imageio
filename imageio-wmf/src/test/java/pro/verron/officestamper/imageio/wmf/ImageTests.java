@@ -3,8 +3,8 @@ package pro.verron.officestamper.imageio.wmf;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
-import pro.verron.officestamper.imageio.wmf.utils.ContextFactory;
-import pro.verron.officestamper.imageio.wmf.utils.OfficeStamperTest;
+import pro.verron.imageio.wmf.utils.ContextFactory;
+import pro.verron.imageio.wmf.utils.OfficeStamperTest;
 
 import java.nio.file.Path;
 
@@ -17,11 +17,13 @@ import static pro.verron.officestamper.preset.OfficeStamperConfigurations.standa
         extends OfficeStamperTest {
 
     @MethodSource("factories")
-    @ParameterizedTest(name = "Wmf Image Replacement in global paragraphs with max width")
+    @ParameterizedTest(name = "Wmf Image Replacement in global paragraphs "
+                              + "with max width")
     void wmfReplacementInGlobalParagraphsTestWithMaxWidth(ContextFactory factory) {
         var configuration = standard();
         var context = factory.image(getImage(Path.of("sample.wmf"), 100));
-        var template = getWordResource(Path.of("ImageReplacementInGlobalParagraphsTest.docx"));
+        var template = getWordResource(Path.of(
+                "ImageReplacementInGlobalParagraphsTest.docx"));
         var expected = """
                 == Image Replacement in global paragraphs
                 

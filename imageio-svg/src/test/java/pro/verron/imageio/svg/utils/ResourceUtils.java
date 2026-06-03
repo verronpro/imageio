@@ -1,4 +1,4 @@
-package pro.verron.officestamper.imageio.wmf.utils;
+package pro.verron.imageio.svg.utils;
 
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.jspecify.annotations.Nullable;

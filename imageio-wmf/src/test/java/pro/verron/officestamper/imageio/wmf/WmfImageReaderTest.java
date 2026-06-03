@@ -2,6 +2,7 @@ package pro.verron.officestamper.imageio.wmf;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import pro.verron.imageio.wmf.WmfImageReaderSpi;
 
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
@@ -29,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.*;
     @DisplayName("sample.wmf: reader detects format and extracts dimensions from Placeable header")
     void sampleWmf_metadataFromPlaceableHeader()
             throws Exception {
-        Path path = Path.of("..", "test", "sources", "sample.wmf");
+        Path path = Path.of("..", "test", "sample.wmf");
         File file = path.toFile();
         assertTrue(file.exists(), "Test WMF file not found: " + file.getAbsolutePath());
 

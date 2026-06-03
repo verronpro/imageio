@@ -160,13 +160,13 @@
             <dependency>
                 <groupId>pro.verron.asciidoc</groupId>
                 <artifactId>asciidoc-core</artifactId>
-                <version>3.5</version>
+                <version>3.6</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>pro.verron.asciidoc</groupId>
                 <artifactId>asciidoc-compiler</artifactId>
-                <version>3.5</version>
+                <version>3.6</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -193,8 +193,10 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/verronpro/imageio.git</connection>
-        <developerConnection>scm:git:git@github.com:verronpro/imageio.git</developerConnection>
+        <connection>scm:git:https://github.com/verronpro/imageio.git
+        </connection>
+        <developerConnection>scm:git:git@github.com:verronpro/imageio.git
+        </developerConnection>
         <url>https://github.com/verronpro/imageio</url>
     </scm>
 

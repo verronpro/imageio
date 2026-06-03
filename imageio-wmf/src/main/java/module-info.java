@@ -1,4 +1,4 @@
-module pro.verron.officestamper.imageio.wmf {
+module pro.verron.imageio.wmf {
     requires java.desktop;
-    provides javax.imageio.spi.ImageReaderSpi with pro.verron.officestamper.imageio.wmf.WmfImageReaderSpi;
+    provides javax.imageio.spi.ImageReaderSpi with pro.verron.imageio.wmf.WmfImageReaderSpi;
 }

@@ -1,0 +1,28 @@
+package pro.verron.imageio.svg.utils;
+
+import pro.verron.officestamper.preset.Image;
+
+/// Factory for creating object-based contexts.
+///
+/// @author Joseph Verron
+/// @since 1.6.5
+public final class ObjectContextFactory
+        implements ContextFactory {
+
+    /// Default constructor.
+    public ObjectContextFactory() {
+    }
+
+    /// Represents the context for an insertable image.
+    @Override
+    public Object image(Image image) {
+        record ImageContext(Image monalisa) {}
+        return new ImageContext(image);
+    }
+
+    @Override
+    public Object name(String name) {
+        record Name(String name) {}
+        return new Name(name);
+    }
+}
