@@ -10,8 +10,7 @@
     <version>3.5-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>
-        Minimal Java ImageIO plugin to detect vector files and read dimensions
-        (width/height) without rendering.
+        Minimal Java ImageIO plugin to detect vector files and read dimensions (width/height) without rendering.
     </description>
     <inceptionYear>2026</inceptionYear>
     <url>https://imageio.verron.pro</url>
