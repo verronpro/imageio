@@ -157,7 +157,7 @@
             <dependency>
                 <groupId>pro.verron.office-stamper</groupId>
                 <artifactId>engine</artifactId>
-                <version>3.4</version>
+                <version>3.5</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
