@@ -9,7 +9,11 @@
   </skin>
 
   <body>
-
+    <links>
+      <item name="Blog" href="https://verron.pro/"/>
+      <item name="GitHub" href="https://github.com/verronpro/imageio"/>
+    </links>
+    
     <menu name="Documentation">
       <item name="Home" href="index.html"/>
     </menu>
