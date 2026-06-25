@@ -3,7 +3,7 @@
 :docs: https://imageio.verron.pro/imageio-wmf
 :blog: https://verron.pro
 
-= ImageIO EMF
+= ImageIO WMF
 
 The `imageio-wmf` module provides a plugin for the Java ImageIO API to read
 Windows Metafile (WMF) files.

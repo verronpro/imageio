@@ -1,24 +1,46 @@
 // suppress inspection "AsciiDocLinkResolve" for whole file
 :ghos: https://github.com/verronpro/imageio
+:wrkf: {ghos}/actions/workflows
 :docs: https://imageio.verron.pro
 :blog: https://verron.pro
 
 = ImageIO Modules
 
+image:{wrkf}/release.yml/badge.svg[Release Status, link={wrkf}/release.yml]
+image:{wrkf}/pages.yml/badge.svg[Documentation Status, link={wrkf}/pages.yml]
+
+== Introduction
+
 This project provides a collection of ImageIO plugins for various vector and metafile formats.
 It allows Java applications to read formats like SVG, EMF, and WMF using the standard `javax.imageio` API.
 
-== Modules
-
-* link:imageio-svg/README.adoc[imageio-svg]: Support for Scalable Vector Graphics (SVG).
-* link:imageio-emf/README.adoc[imageio-emf]: Support for Enhanced Metafile (EMF).
-* link:imageio-wmf/README.adoc[imageio-wmf]: Support for Windows Metafile (WMF).
+The primary goal of these modules is to provide a seamless way to integrate vector graphics into Java applications, especially for document generation tools like Office-stamper.
 
 == Key Features
 
 * **Standard API**: Integrated with `ImageIO`, no need for custom loading logic.
-* **Vector Support**: High-quality rendering of vector formats to `BufferedImage`.
-* **Lightweight**: Optimized for performance and minimal memory footprint.
+* **Lightweight**: Optimized for properties read and minimal memory footprint.
+* **Metadata Extraction**: Efficiently detect vector files and read dimensions without full rendering.
+
+== Modules
+
+This repository is structured into several modules:
+
+* {docs}/imageio-svg[SVG] – Support for Scalable Vector Graphics (SVG).
+* {docs}/imageio-emf[EMF] – Support for Enhanced Metafile (EMF).
+* {docs}/imageio-wmf[WMF] – Support for Windows Metafile (WMF).
+
+== Quick Start
+
+[source,java]
+----
+// Just use the standard ImageIO API
+BufferedImage image = ImageIO.read(new File("image.svg"));
+----
+
+== Documentation
+
+Comprehensive documentation is available at {docs}[{docs}].
 
 == Author
 
