@@ -17,14 +17,6 @@
         Minimal Java ImageIO plugin to detect Placeable WMF files and read dimensions (width/height) without rendering.
     </description>
 
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-        </resources>
-    </build>
-
     <dependencies>
         <dependency>
             <groupId>pro.verron.office-stamper</groupId>
