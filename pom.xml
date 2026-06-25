@@ -217,7 +217,7 @@
             <dependency>
                 <groupId>pro.verron.asciidoc</groupId>
                 <artifactId>asciidoc-compiler</artifactId>
-                <version>3.8</version>
+                <version>3.9</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
