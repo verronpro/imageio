@@ -218,30 +218,17 @@
                         </execution>
                     </executions>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>3.4.0</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>pro.verron.office-stamper</groupId>
-                <artifactId>engine</artifactId>
-                <version>3.6</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>pro.verron.asciidoc</groupId>
-                <artifactId>asciidoc-core</artifactId>
-                <version>3.9</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>pro.verron.asciidoc</groupId>
-                <artifactId>asciidoc-compiler</artifactId>
-                <version>3.9</version>
-                <scope>test</scope>
-            </dependency>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>

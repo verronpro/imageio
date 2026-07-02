@@ -1,13 +1,11 @@
 package pro.verron.imageio.svg;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import javax.imageio.ImageIO;
-import javax.imageio.ImageReader;
 import javax.imageio.spi.IIORegistry;
-import javax.imageio.stream.ImageInputStream;
-import java.io.File;
 import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,31 +14,37 @@ import static org.junit.jupiter.api.Assertions.*;
 /// These tests focus on reading SVG format metadata using `ImageIO` and ensuring that
 /// the reader correctly identifies the format and extracts the width and height attributes
 /// from the SVG file.
-@DisplayName("SVG ImageIO reader metadata tests") public class SvgImageReaderTest {
+@DisplayName("SVG ImageIO reader metadata tests")
+public class SvgImageReaderTest {
+
+    @BeforeAll
+    static void beforeAll() {
+        var registry = IIORegistry.getDefaultInstance();
+        var imageReaderSpi = new SvgImageReaderSpi();
+        registry.registerServiceProvider(imageReaderSpi);
+    }
 
     @Test
     @DisplayName("sample.svg: reader detects format and extracts width/height attributes")
-    void sampleSvg_dimensionsFromAttributes()
-            throws Exception {
-        Path path = Path.of("..", "test", "sample.svg");
-        File file = path.toFile();
+    void sampleSvg_dimensionsFromAttributes() throws Exception {
+        var path = Path.of("..", "test", "sample.svg");
+        var file = path.toFile();
         assertTrue(file.exists(), "Test SVG file not found: " + file.getAbsolutePath());
 
-        ImageIO.scanForPlugins();
-        IIORegistry.getDefaultInstance()
-                   .registerServiceProvider(new SvgImageReaderSpi());
-        try (ImageInputStream iis = ImageIO.createImageInputStream(file)) {
+        try (var iis = ImageIO.createImageInputStream(file)) {
             assertNotNull(iis, "ImageInputStream is null");
-            ImageReader reader = ImageIO.getImageReaders(iis)
-                                        .next();
-            reader.setInput(iis, false, true);
-            assertEquals("svg", reader.getFormatName());
-            int w = reader.getWidth(0);
-            int h = reader.getHeight(0);
-            reader.dispose();
+            var imageReaders = ImageIO.getImageReaders(iis);
+            var firstReader = imageReaders.next();
+            firstReader.setInput(iis, false, true);
+            assertEquals("svg", firstReader.getFormatName());
+            var w = firstReader.getWidth(0);
+            var h = firstReader.getHeight(0);
+            firstReader.dispose();
 
             assertEquals(100, w);
             assertEquals(100, h);
+
+            firstReader.dispose();
         }
     }
 }
