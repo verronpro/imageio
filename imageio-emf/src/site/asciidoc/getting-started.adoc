@@ -1,0 +1,49 @@
+= Getting Started
+
+This guide gets `imageio-emf` working in a project: add the dependency, build from
+source, and read your first EMF file.
+
+== Prerequisites
+
+* A JDK matching the project baseline: **Java 25** (set via `maven.compiler.release`).
+* **Apache Maven 3.9+** (or the project's Maven wrapper, if present).
+
+== Add the dependency
+
+[source,xml]
+----
+<dependency>
+    <groupId>pro.verron.imageio</groupId>
+    <artifactId>imageio-emf</artifactId>
+    <version>${project.version}</version>
+</dependency>
+----
+
+== Build from source
+
+[source,bash]
+----
+git clone https://github.com/verronpro/imageio.git
+cd imageio/imageio-emf
+mvn install
+----
+
+== Read your first EMF
+
+[source,java]
+----
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+BufferedImage image = ImageIO.read(new File("image.emf"));
+----
+
+The plugin auto-registers as an `ImageIO` provider for EMF, so no manual registration
+is needed.
+
+== Where to go next
+
+* xref:features.adoc[Features] — ImageIO integration and vector-quality rendering.
+* xref:examples.adoc[Examples] — more reading scenarios.
+* xref:index.adoc[Overview] — the module README and links to the full documentation.

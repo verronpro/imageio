@@ -1,0 +1,35 @@
+= Examples
+
+All `imageio` plugins share the same `ImageIO` entry point. Add the format's dependency,
+then read the file.
+
+== Read an SVG
+
+[source,java]
+----
+BufferedImage image = ImageIO.read(new File("image.svg"));
+----
+
+== Read an EMF
+
+[source,java]
+----
+BufferedImage image = ImageIO.read(new File("image.emf"));
+----
+
+== Read a WMF
+
+[source,java]
+----
+BufferedImage image = ImageIO.read(new File("image.wmf"));
+----
+
+== Read dimensions without rendering
+
+The plugins support reading metadata (e.g. dimensions) without a full render, keeping
+the operation lightweight.
+
+== Next steps
+
+* xref:getting-started.adoc[Getting Started] — add a plugin and read your first image.
+* xref:features.adoc[Features] — the standard-API, lightweight, metadata-focused design.

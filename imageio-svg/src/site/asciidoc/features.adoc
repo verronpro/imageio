@@ -1,0 +1,21 @@
+= Features
+
+`imageio-svg` provides an ImageIO plugin to read Scalable Vector Graphics (SVG) files.
+
+== ImageIO integration
+
+Automatically registered as a provider for SVG files — once the dependency is on the
+classpath, `ImageIO.read(...)` handles SVG with no extra setup.
+
+== High quality
+
+Leverages Apache Batik for accurate vector rendering into a `BufferedImage`.
+
+== Simple API
+
+Use `ImageIO.read()` to load SVG files just like any other image format.
+
+== Related modules
+
+* xref:index.adoc[ImageIO] — the parent project and the other format plugins.
+* `imageio-emf` / `imageio-wmf` — EMF and WMF support.

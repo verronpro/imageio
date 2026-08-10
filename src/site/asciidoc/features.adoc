@@ -1,0 +1,32 @@
+= Features
+
+`imageio` is a collection of ImageIO plugins for vector and metafile formats (SVG, EMF,
+WMF). They let Java applications read these formats through the standard
+`javax.imageio` API.
+
+== Standard API
+
+Integrated with `ImageIO`, so there is no custom loading logic to write — just call
+`ImageIO.read(...)`. Each plugin auto-registers as a provider for its format.
+
+== Lightweight
+
+Optimized for properties read and a minimal memory footprint, so reading metadata is
+cheap even on large images.
+
+== Metadata extraction
+
+Efficiently detect vector files and read their dimensions *without* performing a full
+render — useful for indexing, thumbnailing, or validation pipelines.
+
+== Design goals
+
+* *Seamless integration*: drop in a dependency and the format just works with `ImageIO`.
+* *Document-generation friendly*: built to feed vector graphics into tools like
+  Office-stamper.
+
+== Related modules
+
+* `imageio-svg` — Scalable Vector Graphics support (via Apache Batik).
+* `imageio-emf` — Enhanced Metafile support.
+* `imageio-wmf` — Windows Metafile support.

@@ -1,0 +1,22 @@
+= Features
+
+`imageio-emf` provides an ImageIO plugin to read Enhanced Metafile (EMF) files.
+
+== ImageIO integration
+
+Automatically registered as a provider for EMF files — once the dependency is on the
+classpath, `ImageIO.read(...)` handles EMF with no extra setup.
+
+== Vector quality
+
+Preserves the vector quality of metafile content during rendering into a
+`BufferedImage`.
+
+== Simple API
+
+Seamlessly integrates with `ImageIO.read()`, so EMF loads like any other image format.
+
+== Related modules
+
+* xref:index.adoc[ImageIO] — the parent project and the other format plugins.
+* `imageio-svg` / `imageio-wmf` — SVG and WMF support.

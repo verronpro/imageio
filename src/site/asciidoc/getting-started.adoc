@@ -1,0 +1,51 @@
+= Getting Started
+
+This guide gets the `imageio` modules working in a project: add a plugin, build from
+source, and read your first vector image through the standard `ImageIO` API.
+
+== Prerequisites
+
+* A JDK matching the project baseline: **Java 25** (set via `maven.compiler.release`).
+* **Apache Maven 3.9+** (or the project's Maven wrapper, if present).
+
+== Add a plugin
+
+Pick the format you need. For SVG:
+
+[source,xml]
+----
+<dependency>
+    <groupId>pro.verron.imageio</groupId>
+    <artifactId>imageio-svg</artifactId>
+    <version>${project.version}</version>
+</dependency>
+----
+
+The plugins (`imageio-svg`, `imageio-emf`, `imageio-wmf`) register themselves as
+`ImageIO` providers, so no manual registration is needed.
+
+== Build from source
+
+[source,bash]
+----
+git clone https://github.com/verronpro/imageio.git
+cd imageio
+mvn install
+----
+
+== Read your first image
+
+[source,java]
+----
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+BufferedImage image = ImageIO.read(new File("image.svg"));
+----
+
+== Where to go next
+
+* xref:features.adoc[Features] — the standard-API, lightweight, metadata-focused design.
+* xref:examples.adoc[Examples] — reading SVG, EMF, and WMF.
+* xref:index.adoc[Overview] — the project README and links to the full documentation.

@@ -13,9 +13,12 @@
       <item name="Blog" href="https://verron.pro/"/>
       <item name="GitHub" href="https://github.com/verronpro/imageio"/>
     </links>
-    
+
     <menu name="Documentation">
       <item name="Home" href="index.html"/>
+      <item name="Getting Started" href="getting-started.html"/>
+      <item name="Features" href="features.html"/>
+      <item name="Examples" href="examples.html"/>
     </menu>
 
     <menu ref="modules"/>

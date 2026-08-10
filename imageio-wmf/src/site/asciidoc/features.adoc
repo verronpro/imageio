@@ -1,0 +1,22 @@
+= Features
+
+`imageio-wmf` provides an ImageIO plugin to read Windows Metafile (WMF) files.
+
+== ImageIO integration
+
+Automatically registered as a provider for WMF files — once the dependency is on the
+classpath, `ImageIO.read(...)` handles WMF with no extra setup.
+
+== Vector quality
+
+Preserves the vector quality of metafile content during rendering into a
+`BufferedImage`.
+
+== Simple API
+
+Seamlessly integrates with `ImageIO.read()`, so WMF loads like any other image format.
+
+== Related modules
+
+* xref:index.adoc[ImageIO] — the parent project and the other format plugins.
+* `imageio-svg` / `imageio-emf` — SVG and EMF support.

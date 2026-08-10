@@ -1,0 +1,23 @@
+= Examples
+
+Practical snippets for `imageio-wmf`. The plugin is used through the standard `ImageIO`
+API.
+
+== Read a WMF file
+
+[source,java]
+----
+BufferedImage image = ImageIO.read(new File("image.wmf"));
+----
+
+== Read from a stream
+
+[source,java]
+----
+BufferedImage image = ImageIO.read(inputStream);
+----
+
+== Next steps
+
+* xref:getting-started.adoc[Getting Started] — add the dependency and read your first WMF.
+* xref:features.adoc[Features] — ImageIO integration and vector-quality rendering.
